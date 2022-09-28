@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
+
 <div class="row">
   <div class="col-md-6">
     <div class="p-3  card">
