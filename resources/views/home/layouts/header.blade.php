@@ -33,7 +33,7 @@
         </ul>
 
         @auth
-        <a href="/profile" class="btn btn-success btn-sm mx-2">
+        <a href="/admin/dashboard" class="btn btn-success btn-sm mx-2">
           <i class="fas fa-user"></i> Profile
         </a>
        
