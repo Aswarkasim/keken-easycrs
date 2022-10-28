@@ -21,7 +21,7 @@
           <img src="/{{$item->cover}}" width="200px" alt="">
           
           <div class="content-text p-4">
-            <h5><a href="/artikel/show/{{$item->id}}" class="text-decoration-none"><strong>{{$item->title}}</strong></a></h5>
+            <h5><a href="/lowongan/show/{{$item->id}}" class="text-decoration-none"><strong>{{$item->title}}</strong></a></h5>
             <p>{{Illuminate\Support\Str::limit($item->desc,100)}}</p>
           </div>
         </div>
