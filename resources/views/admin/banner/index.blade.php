@@ -17,7 +17,7 @@
   <thead>
     <tr>
       <th>No</th>
-      <th>Nama</th>
+      <th>Banner</th>
       <th>Action</th>
     </tr>
   </thead>
@@ -27,7 +27,7 @@
         
     <tr>
       <td width="50px">{{$loop->iteration}}</td>
-      <td><a href="/admin/banner/{{$row->id}}"><b>{{$row->topik}}</a></b> </td>
+      <td><img src="/{{ $row->image }}" width="150px" alt=""></td>
       <td>
         <div class="btn-group">
             <button type="button" class="btn btn-primary"><i class="fa fa-cogs"></i></button>
