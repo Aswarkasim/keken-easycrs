@@ -11,8 +11,8 @@
 
       <div class="my-5">
 
-        <h3><b>Harga : {{ $kelas->harga }}</b></h3><br>
-        <h3><b>Kapasitas : {{ $kelas->kapasitas }}</b></h3><br>
+        <h6><b>Harga : {{ $kelas->harga }}</b></h6><br>
+        <h6><b>Kapasitas : {{ $kelas->kapasitas }}</b></h6><br>
         <p>{!!$kelas->desc!!}</p>
       </div>
     </div>
