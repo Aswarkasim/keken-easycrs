@@ -13,8 +13,8 @@
       <img class="first-slide" src="{{$item->image}}" alt="First slide">
       <div class="container">
         <div class="carousel-caption text-left">
-          <h1>{{$item->topik}}</h1>
-          <p>{!!$item->desc!!}</p>
+          {{-- <h1>{{$item->topik}}</h1>
+          <p>{!!$item->desc!!}</p> --}}
           {{-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> --}}
         </div>
       </div>
