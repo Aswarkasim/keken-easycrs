@@ -56,7 +56,7 @@
               <h6 class="text-muted">/Bulan</h6> 
             </div>
             
-            <a href="/kelas/detail/{{$row->id}}" class="btn btn-box mt-3">Lihat</a>
+            <a href="/kelas/show/{{$row->id}}" class="btn btn-box mt-3">Lihat</a>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
           <h6 class="pt-2"><b>{{ Illuminate\Support\Str::limit($item->title,25)}}</b></h6>
           <p class="pt-2">{!! Illuminate\Support\Str::limit($item->desc,50)!!}</p>
           
-          <a href="/kelas/detail/{{$item->id}}" class="btn btn-box mt-3">Lihat</a>
+          <a href="/kelas/show/{{$item->id}}" class="btn btn-box mt-3">Lihat</a>
         </div>
       </div>
     </div>
