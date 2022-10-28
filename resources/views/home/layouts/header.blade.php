@@ -15,19 +15,19 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('artikel') ? 'menu-active' : ''}} " href="/artikel">Artikel</a>
+            <a class="nav-link {{ Request::is('artikel*') ? 'menu-active' : ''}} " href="/artikel">Artikel</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('kelas') ? 'menu-active' : ''}}" href="/kelas">Kelas</a>
+            <a class="nav-link {{ Request::is('kelas*') ? 'menu-active' : ''}}" href="/kelas">Kelas</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('lowongan') ? 'menu-active' : ''}}" href="/lowongan">Lowongan</a>
+            <a class="nav-link {{ Request::is('lowongan*') ? 'menu-active' : ''}}" href="/lowongan">Lowongan</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('contact') ? 'menu-active' : ''}}" href="/contact">Kontak</a>
+            <a class="nav-link {{ Request::is('contact*') ? 'menu-active' : ''}}" href="/contact">Kontak</a>
           </li>
   
         </ul>

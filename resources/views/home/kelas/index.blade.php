@@ -28,7 +28,7 @@
               <h6 class="text-muted">/Bulan</h6> 
             </div>
             
-            <a href="/kelas/detail/{{$row->id}}" class="btn btn-box mt-3">Lihat</a>
+            <a href="/kelas/show/{{$row->id}}" class="btn btn-box mt-3">Lihat</a>
           </div>
         </div>
       </div>
