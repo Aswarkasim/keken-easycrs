@@ -10,7 +10,7 @@
       </div>
 
       <div class="my-4">
-        <p>{!!$post->body!!}</p>
+        <p>{!!$lowongan->desc!!}</p>
       </div>
     </div>
 
