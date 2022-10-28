@@ -3,10 +3,10 @@
     <div class="col-md-8 pt-2">
 
       <a href="/artikel">&LeftArrow; Kembali ke halaman awal</a>
-      <h4><strong>{{$post->title}}</strong></h4>
-      <p class="text-mute">ditambahkan pada {{format_indo($post->created_at)}}</p>
+      <h4><strong>{{$lowongan->title}}</strong></h4>
+      <p class="text-mute">ditambahkan pada {{format_indo($lowongan->created_at)}}</p>
       <div class="mt-2" style="width: 100%; max-height:300px; overflow: hidden">
-        <img src="/{{$post->image}}" alt="" style="width:100%;">
+        <img src="/{{$lowongan->cover}}" alt="" style="width:100%;">
       </div>
 
       <div class="my-4">
