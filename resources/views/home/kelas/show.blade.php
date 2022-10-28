@@ -9,7 +9,10 @@
         <img src="/{{$kelas->cover}}" alt="" style="width:100%;">
       </div>
 
-      <div class="my-4">
+      <div class="my-5">
+
+        <h3><b>Harga : {{ $kelas->harga }}</b></h3><br>
+        <h3><b>Kapasitas : {{ $kelas->kapasitas }}</b></h3><br>
         <p>{!!$kelas->desc!!}</p>
       </div>
     </div>
