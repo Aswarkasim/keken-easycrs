@@ -25,6 +25,15 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="/admin/saran" class="nav-link {{Request::is('admin/saran*') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Saran
+              </p>
+            </a>
+          </li>
+
            <li class="nav-item">
             <a href="/admin/kelas" class="nav-link {{Request::is('admin/kelas') ? 'active' : ''}}">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
@@ -76,12 +85,13 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+           
+              {{-- <li class="nav-item">
                 <a href="/admin/user?role=user" class="nav-link {{request('role')== 'user' ? 'child-active' : ''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>User</p>
                 </a>
-              </li>
+              </li> --}}
               <li class="nav-item">
                 <a href="/admin/user?role=admin" class="nav-link  {{request('role')== 'admin' ? 'child-active' : ''}}">
                   <i class="far fa-circle nav-icon"></i>

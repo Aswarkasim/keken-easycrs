@@ -11,6 +11,7 @@ use App\Http\Controllers\AdminConfigurationController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminLowonganController;
+use App\Http\Controllers\AdminSaranController;
 use App\Http\Controllers\HomeArtikelController;
 use App\Http\Controllers\HomeKelasController;
 use App\Http\Controllers\HomeLowonganController;
@@ -51,6 +52,12 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::resource('/kelas', AdminKelasController::class);
     Route::resource('/lowongan', AdminLowonganController::class);
     Route::resource('/banner', AdminBannerController::class);
+
+
+    Route::get('/saran', [AdminSaranController::class, 'index']);
+    Route::get('/saran/show/{id}', [AdminSaranController::class, 'detail']);
+    Route::get('/saran/delete/{id}', [AdminSaranController::class, 'delete']);
+
 
 
     Route::prefix('/posts')->group(function () {

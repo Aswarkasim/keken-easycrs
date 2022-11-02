@@ -127,7 +127,7 @@ class AdminUserController extends Controller
         if ($request->password == '') {
             $data['password'] = $user->password;
         } else {
-            $data['password'] = Hash::make($data['password']);
+            $data['password'] = Hash::make($request->password);
         }
 
         $user->update($data);

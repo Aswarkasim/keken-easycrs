@@ -6,7 +6,7 @@
           <span class="info-box-text">Total Kelas</span>
           <span class="info-box-number">
             {{$kelas}}
-            <small>Mahasiwa</small>
+            <small>Kelas</small>
           </span>
   
         </div>
@@ -18,10 +18,10 @@
         <div class="info-box">
           <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
           <div class="info-box-content">
-            <span class="info-box-text">Total Lowngan</span>
+            <span class="info-box-text">Total Lowongan</span>
             <span class="info-box-number">
               {{$lowongan}}
-              <small>Mahasiwa</small>
+              <small>Lowongan</small>
             </span>
     
           </div>
