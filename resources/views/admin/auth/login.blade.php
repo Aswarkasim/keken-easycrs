@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in</title>
+  <title>Login Admin :: Easy Course</title>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
@@ -17,12 +17,12 @@
 <body class="hold-transition login-page" style="background-color:white">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Admin</b>LTE</a>
+    <a href="#"><b>Admin</b> Easy Course</a>
   </div>
   <!-- /.login-logo -->
   <div class="card shadow">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Mulai Login mentuk mengelolah halaman web</p>
 
         @if (session()->has('loginError'))      
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -74,7 +74,7 @@
         <a href="forgot-password.html">I forgot my password</a>
       </p> --}}
       <p class="mb-0">
-        <a href="register.html" class="text-center">Register</a>
+        {{-- <a href="register.html" class="text-center">Register</a> --}}
       </p>
     </div>
     <!-- /.login-card-body -->
