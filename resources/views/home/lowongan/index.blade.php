@@ -34,7 +34,7 @@
           </div>
 
       @else
-      <p class="alert alert-info"><i class="fas fa-info"></i> Belum ada berita tentang {{$kategori_detail->name}}</p>
+      <p class="alert alert-info"><i class="fas fa-info"></i> Belum ada berita tentang {{ isset($kategori_detail) ? $kategori_detail->name : ''}}</p>
       @endif
 
 

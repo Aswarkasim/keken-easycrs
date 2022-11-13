@@ -23,6 +23,7 @@ class HomeController extends Controller
             'post'     => Post::with('category')->paginate(4),
             'kelas'    => Kelas::limit(4)->get(),
             'lowongan'    => Lowongan::limit(4)->get(),
+            'kontak'   => Configuration::first(),
             'content'  => 'home/home/index'
         ];
         return view('home/layouts/wrapper', $data);

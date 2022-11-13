@@ -12,13 +12,16 @@
           @csrf
           <div class="form-group">
             <label for="">Nama</label>
-            <input type="text" class="form-control  @error('nama') is-invalid @enderror"  name="nama"  value="{{isset($kategori) ? $kategori->nama : old('nama')}}" placeholder="Nama">
+            <input type="text" class="form-control  @error('nama') is-invalid @enderror"  name="nama"  value="{{isset($kategori) ? $kategori->name : old('nama')}}" placeholder="Nama">
              @error('nama')
                 <div class="invalid-feedback">
                   {{$message}}
                 </div>
              @enderror
           </div>
+
+          <input type="text" class="form-control" name="id" value="{{ isset($kategori) ? $kategori->id : '' }}">
+
 
      {{-- {!!form_input($errors, 'nama', 'Nama', isset($kategori) ? $kategori : null)!!} --}}
 
