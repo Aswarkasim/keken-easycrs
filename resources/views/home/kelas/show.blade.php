@@ -14,6 +14,11 @@
         <h6><b>Harga : {{ format_rupiah($kelas->harga) }}</b></h6><br>
         <h6><b>Kapasitas : {{ $kelas->kapasitas }} Orang</b></h6><br>
         <p>{!!$kelas->desc!!}</p>
+
+
+    <a href="https://api.whatsapp.com/send?phone={{ $kontak->wa }}" target="blank" class="btn btn-success px-5 mt-3"><i class="fas fa-comment"></i> Hubungi Kami di WhatsApp</a>
+
+    
       </div>
     </div>
 

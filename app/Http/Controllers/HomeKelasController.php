@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Configuration;
 use App\Models\Kategori;
 use App\Models\Kelas;
 use Illuminate\Http\Request;
@@ -30,6 +31,7 @@ class HomeKelasController extends Controller
         $data = [
             'kelas'          => $kelas,
             'kategori'      => Kategori::all(),
+            'kontak'   => Configuration::first(),
             'content'       => 'home/kelas/show'
         ];
         return view('home/layouts/wrapper', $data);
