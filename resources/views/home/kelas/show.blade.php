@@ -5,7 +5,7 @@
       <a href="/artikel">&LeftArrow; Kembali ke halaman awal</a>
       <h4><strong>{{$kelas->title}}</strong></h4>
       <p class="text-mute">ditambahkan pada {{format_indo($kelas->created_at)}}</p>
-      <div class="mt-2" style="width: 100%; max-height:300px; overflow: hidden">
+      <div class="mt-2" style="width: 100%;overflow: hidden">
         <img src="/{{$kelas->cover}}" alt="" style="width:100%;">
       </div>
 
