@@ -34,6 +34,24 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="/admin/profile" class="nav-link {{Request::is('admin/profile*') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Profil
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/galeri" class="nav-link {{Request::is('admin/galeri*') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-images"></i>
+              <p>
+                Galeri
+              </p>
+            </a>
+          </li>
+
            <li class="nav-item">
             <a href="/admin/kelas" class="nav-link {{Request::is('admin/kelas') ? 'active' : ''}}">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>

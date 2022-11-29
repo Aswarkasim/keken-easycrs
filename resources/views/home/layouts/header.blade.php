@@ -13,6 +13,14 @@
           <li class="nav-item">
             <a class="nav-link {{ Request::is('/') ? 'menu-active' : ''}}" href="/">Home</a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link {{ Request::is('profile*') ? 'menu-active' : ''}} " href="/profile">Profil</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link {{ Request::is('galeri*') ? 'menu-active' : ''}} " href="/galeri">Galeri</a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link {{ Request::is('artikel*') ? 'menu-active' : ''}} " href="/artikel">Artikel</a>

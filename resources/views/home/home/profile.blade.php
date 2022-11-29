@@ -2,18 +2,21 @@
   <div class="row">
     <div class="col-md-8 pt-2">
 
-      <a href="/artikel">&LeftArrow; Kembali ke halaman awal</a>
-      <h4><strong>{{$kelas->title}}</strong></h4>
-      <p class="text-mute">ditambahkan pada {{format_indo($kelas->created_at)}}</p>
+      <div class="text-center mb-4">
+        <h1 class="brush-font text-orange pt-3">Tentang Kami</h1>
+      </div>
+
+      {{-- <a href="/artikel">&LeftArrow; Kembali ke halaman awal</a> --}}
+      <h4><strong>{{$profile->title}}</strong></h4>
       <div class="mt-2" style="width: 100%; overflow: hidden">
-        <img src="/{{$kelas->cover}}" alt="" style="width:100%;">
+        <img src="/{{$profile->gambar}}" alt="" style="width:100%;">
       </div>
 
       <div class="my-5">
 
-        <h6><b>Harga : {{ format_rupiah($kelas->harga) }}</b></h6><br>
-        <h6><b>Kapasitas : {{ $kelas->kapasitas }} Orang</b></h6><br>
-        <p>{!!$kelas->desc!!}</p>
+        <p>{!! $profile->desc !!}</p>
+      <p class="text-mute">diperbaharui pada {{format_indo($profile->updated_at)}}</p>
+
 
 
     <a href="https://api.whatsapp.com/send?phone={{ $kontak->wa }}" target="blank" class="btn btn-success px-5 mt-3"><i class="fas fa-comment"></i> Hubungi Kami di WhatsApp</a>

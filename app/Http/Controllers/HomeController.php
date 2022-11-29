@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Banner;
 use App\Models\Configuration;
+use App\Models\Galeri;
+use App\Models\Kategori;
 use App\Models\Kelas;
 use App\Models\Lowongan;
+use App\Models\Profile;
 use App\Models\Saran;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -53,5 +56,33 @@ class HomeController extends Controller
         Saran::create($data);
         Alert::success('Sukses', 'Saran anda telah terkirim');
         return redirect()->back()->with('success', 'Saran anda telah terkirim');
+    }
+
+
+    public function profile()
+    {
+        //
+
+        $data = [
+            'profile'   => Profile::first(),
+            'kategori'      => Kategori::all(),
+            'kontak'   => Configuration::first(),
+            'content'  => 'home/home/profile'
+        ];
+        return view('home/layouts/wrapper', $data);
+    }
+
+
+    public function galeri()
+    {
+        //
+
+        $data = [
+            'galeri'   => Galeri::paginate(12),
+            'kategori'      => Kategori::all(),
+            'kontak'   => Configuration::first(),
+            'content'  => 'home/home/galeri'
+        ];
+        return view('home/layouts/wrapper', $data);
     }
 }

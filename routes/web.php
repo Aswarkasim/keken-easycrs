@@ -9,8 +9,10 @@ use App\Http\Controllers\AdminBannerController;
 use App\Http\Controllers\AdminCategoryPostController;
 use App\Http\Controllers\AdminConfigurationController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminGaleriController;
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminLowonganController;
+use App\Http\Controllers\AdminProfileController;
 use App\Http\Controllers\AdminSaranController;
 use App\Http\Controllers\HomeArtikelController;
 use App\Http\Controllers\HomeKelasController;
@@ -46,9 +48,13 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
 
     Route::resource('/user', AdminUserController::class);
 
+    Route::get('/profile', [AdminProfileController::class, 'index']);
+    Route::put('/profile/update', [AdminProfileController::class, 'update']);
+
     Route::get('/konfigurasi', [AdminConfigurationController::class, 'index']);
     Route::put('/konfigurasi/update', [AdminConfigurationController::class, 'update']);
 
+    Route::resource('/galeri', AdminGaleriController::class);
     Route::resource('/kelas', AdminKelasController::class);
     Route::resource('/lowongan', AdminLowonganController::class);
     Route::resource('/banner', AdminBannerController::class);
@@ -71,6 +77,9 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
 Route::get('/artikel', [HomeArtikelController::class, 'index']);
 Route::get('/artikel/show/{id}', [HomeArtikelController::class, 'show']);
 
+
+Route::get('/profile', [HomeController::class, 'profile']);
+Route::get('/galeri', [HomeController::class, 'galeri']);
 
 Route::get('/kelas', [HomeKelasController::class, 'index']);
 Route::get('/kelas/show/{id}', [HomeKelasController::class, 'show']);
