@@ -124,7 +124,7 @@
               <li class="nav-item">
                 <a href="/admin/user?role=user" class="nav-link  {{request('role')== 'user' ? 'child-active' : ''}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Admin</p>
+                  <p>User</p>
                 </a>
               </li>
             </ul>
