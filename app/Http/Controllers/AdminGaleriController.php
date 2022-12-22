@@ -16,7 +16,12 @@ class AdminGaleriController extends Controller
     public function index()
     {
         //
-        $galeri = Galeri::paginate(10);
+        $cari = request('cari');
+        if ($cari) {
+            $galeri = Galeri::where('name', 'like', '%' . $cari . '%')->latest()->paginate(10);
+        } else {
+            $galeri = Galeri::latest()->paginate(10);
+        }
         $data = [
             'title'   => 'Manajemen Galeri',
             'galeri' => $galeri,

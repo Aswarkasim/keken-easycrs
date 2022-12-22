@@ -27,6 +27,7 @@
       <th width="30px">#</th>
       <th>Nama</th>
       <th>Kotak</th>
+      <td width="150px">Action</td>
     </tr>
   </thead>
 
@@ -38,6 +39,9 @@
       <td><a href="/admin/saran/show/{{$row->id}}" class="{{$row->is_read == 0 ? 'text-white' : ''}}"><b>{{$row->name}}</a></b> </td>
       <td>
        {{$row->nohp}}
+      </td>
+      <td>
+        <a href="/admin/saran/delete/{{ $row->id }}" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</a>
       </td>
     </tr>
 

@@ -17,6 +17,7 @@ class AdminBannerController extends Controller
     {
         //
         $banner = Banner::paginate(10);
+
         $data = [
             'title'   => 'Manajemen Banner',
             'banner' => $banner,
@@ -136,7 +137,7 @@ class AdminBannerController extends Controller
             $image->move($storage, $file_name);
             $data['image'] = $storage . $file_name;
         } else {
-            $data['image'] = 'null';
+            $data['image'] = $banner->image;
         }
 
         $banner->update($data);

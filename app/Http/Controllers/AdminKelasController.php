@@ -16,7 +16,12 @@ class AdminKelasController extends Controller
     public function index()
     {
         //
-        $kelas = Kelas::paginate(10);
+        $cari = request('cari');
+        if ($cari) {
+            $kelas = Kelas::where('name', 'like', '%' . $cari . '%')->latest()->paginate(10);
+        } else {
+            $kelas = Kelas::latest()->paginate(10);
+        }
         $data = [
             'title'   => 'Manajemen Kelas',
             'kelas' => $kelas,

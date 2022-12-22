@@ -21,7 +21,7 @@ class AdminPostController extends Controller
         $cari = request('cari');
 
         if ($cari) {
-            $post = Post::where('nama', 'like', '%' . $cari . '%')->latest()->paginate(10);
+            $post = Post::where('title', 'like', '%' . $cari . '%')->latest()->paginate(10);
         } else {
             $post = Post::latest()->paginate(10);
         }

@@ -8,7 +8,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminLowonganController extends Controller
 {
-   /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -16,7 +16,12 @@ class AdminLowonganController extends Controller
     public function index()
     {
         //
-        $lowongan = Lowongan::paginate(10);
+        $cari = request('cari');
+        if ($cari) {
+            $lowongan = Lowongan::where('nama', 'like', '%' . $cari . '%')->latest()->paginate(10);
+        } else {
+            $lowongan = Lowongan::latest()->paginate(10);
+        }
         $data = [
             'title'   => 'Manajemen Lowongan',
             'lowongan' => $lowongan,
@@ -147,13 +152,13 @@ class AdminLowonganController extends Controller
     public function destroy($id)
     {
         //
-         //
-         $lowongan = Lowongan::find($id);
-         if ($lowongan->cover != '') {
-             unlink($lowongan->cover);
-         }
-         $lowongan->delete();
-         Alert::success('Sukses', 'Lowongan sukses dihapus');
-         return redirect('/admin/lowongan');
+        //
+        $lowongan = Lowongan::find($id);
+        if ($lowongan->cover != '') {
+            unlink($lowongan->cover);
+        }
+        $lowongan->delete();
+        Alert::success('Sukses', 'Lowongan sukses dihapus');
+        return redirect('/admin/lowongan');
     }
 }

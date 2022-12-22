@@ -94,6 +94,10 @@
             </ul>
           </li>
 
+          @if (auth()->user()->role == 'admin')
+              
+          
+
           <li class="nav-item {{Request::is('admin/user*') ? 'menu-open' : ''}}">
             <a href="#" class="nav-link {{Request::is('admin/user*') ? 'active' : ''}}">
               <i class="nav-icon fas fa-users"></i>
@@ -117,7 +121,8 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li>     
+          @endif
 
            <li class="nav-item">
             <a href="/admin/banner" class="nav-link {{Request::is('admin/banner*') ? 'active' : ''}}">

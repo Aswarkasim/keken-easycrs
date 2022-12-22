@@ -20,7 +20,7 @@ class AdminCategoryPostController extends Controller
         $cari = request('cari');
 
         if ($cari) {
-            $kategori = Kategori::where('nama', 'like', '%' . $cari . '%')->latest()->paginate(10);
+            $kategori = Kategori::where('name', 'like', '%' . $cari . '%')->latest()->paginate(10);
         } else {
             $kategori = Kategori::latest()->paginate(10);
         }
