@@ -26,7 +26,7 @@
     <tr>
       <th width="30px">#</th>
       <th>Nama</th>
-      <th>Kotak</th>
+      <th>Kontak</th>
       <td width="150px">Action</td>
     </tr>
   </thead>

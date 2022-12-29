@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="/dist/css/carousel.css" rel="stylesheet">
+    
       <link rel="stylesheet" href="/dist/css/ktchome.css">
   </head>
   <body>
