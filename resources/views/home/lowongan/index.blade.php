@@ -1,6 +1,6 @@
-<div class="img-wrapper-cover">
+{{-- <div class="img-wrapper-cover">
   <img src="/img/cover.jpeg" width="100%" alt="">
-</div>
+</div> --}}
 
 <div class="container my-4">
 
