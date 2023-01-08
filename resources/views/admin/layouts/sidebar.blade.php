@@ -26,6 +26,24 @@
           </li>
 
           <li class="nav-item">
+            <a href="/admin/peserta" class="nav-link {{Request::is('admin/peserta') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Peserta
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/pengajar" class="nav-link {{Request::is('admin/pengajar') ? 'active' : ''}}">
+              <i class="nav-icon fas fa-graduation-cap"></i>
+              <p>
+                Pengajar
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="/admin/saran" class="nav-link {{Request::is('admin/saran*') ? 'active' : ''}}">
               <i class="nav-icon fas fa-envelope"></i>
               <p>
@@ -100,7 +118,7 @@
 
           <li class="nav-item {{Request::is('admin/user*') ? 'menu-open' : ''}}">
             <a href="#" class="nav-link {{Request::is('admin/user*') ? 'active' : ''}}">
-              <i class="nav-icon fas fa-users"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 User
                 <i class="right fas fa-angle-left"></i>

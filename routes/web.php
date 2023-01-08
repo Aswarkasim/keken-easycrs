@@ -12,6 +12,8 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminGaleriController;
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminLowonganController;
+use App\Http\Controllers\AdminPengajarController;
+use App\Http\Controllers\AdminPesertaController;
 use App\Http\Controllers\AdminProfileController;
 use App\Http\Controllers\AdminSaranController;
 use App\Http\Controllers\HomeArtikelController;
@@ -34,7 +36,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 
 Route::prefix('/admin/auth')->group(function () {
-    Route::get('/', [AdminAuthController::class, 'index'])->middleware('guest');
+    Route::get('/', [AdminAuthController::class, 'index'])->middleware('guest')->name('login');
     Route::post('/login', [AdminAuthController::class, 'login']);
 
     Route::get('/register', [AdminAuthController::class, 'register']);
@@ -54,6 +56,8 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::get('/konfigurasi', [AdminConfigurationController::class, 'index']);
     Route::put('/konfigurasi/update', [AdminConfigurationController::class, 'update']);
 
+    Route::resource('/peserta', AdminPesertaController::class);
+    Route::resource('/pengajar', AdminPengajarController::class);
     Route::resource('/galeri', AdminGaleriController::class);
     Route::resource('/kelas', AdminKelasController::class);
     Route::resource('/lowongan', AdminLowonganController::class);
